@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Needed" mandatory="true" max_length="40" name="u_needed" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Requested" mandatory="true" max_length="32" name="u_requested" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="aml" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="AML" sequence="0" value="aml"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="1" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="2" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="3" value="legal"/>
+            </choice>
+        </element>
+    </element>
+</database>
